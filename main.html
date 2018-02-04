@@ -1,0 +1,40 @@
+<html ng-app="app" ng-cloak>
+    <head>
+        <title>Cool Title Lol</title>
+        <link rel="stylesheet", type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-controller="mainCtrl">
+    <div class="container">
+        <h1>Search Products:</h1>
+        <input id="search-product-input" type="text" ng-model="productSearchModel" ng-change="searchProducts(productSearchModel)"/>
+        <button id="show-all-button" ng-click="searchProducts()">Show All</button><br>
+
+        <div class="products-div">
+            <ul class="list-group">
+                <li ng-repeat="item in availableProducts" ng-attr-title="{{item.description}}" class="clickable list-group-item" span ng-click="addToBasket(item)">
+                    {{item.name}} (${{item.price}})
+                </li>
+            </ul>
+        </div>
+
+        <div class="basket-div">
+            <ul>
+                <li ng-repeat="item in basket" class="clickable list-group-item basket-item" ng-click="removeFromBasket(item)">
+                    {{item.name}} (x{{item.quantity}})
+                </li>
+            </ul>
+        </div>
+        <br><br>
+        <div>
+            <button class="purchase-button" ng-click="completePurchase(basket)">Complete Purchase</button>
+            <p>{{purchaseStatus}}</p>
+        </div>
+
+
+    </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="model.js"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+.clickable{
+    cursor: pointer;
+    user-select: none;
+}
+.products-div{
+    display: inline-block;
+    border: solid blue;
+    min-width: 400px;
+    min-height: 450px;
+    margin-top: 15px;
+}
+.basket-div{
+    float: right;
+    display: inline-block;
+}
+.basket-item{
+    background-color: #6495ED;
+    min-width: 200px;
+}
+.purchase-button{
+    float: right;
+}

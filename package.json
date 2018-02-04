@@ -1,0 +1,14 @@
+{
+  "name": "electron-practice-project",
+  "version": "1.0.0",
+  "description": "practice project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Milan",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.7.12"
+  }
+}
